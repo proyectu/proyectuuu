@@ -22,7 +22,7 @@ and open the template in the editor.
             if((hash('sha256', $_POST['ncontrasena']) == hash('sha256', $_POST['ncontrasena2']) ) && ( $ff == 0)){
                 $nncontrasena = hash('sha256', $_POST['ncontrasena']);
                   $_POST["ncontrasena"];
-             //$foto = $_POST['foto'];
+            
                $foto=basename( $_FILES['foto']['name']);
                $target_path = "imagenes/";
 $target_path = $target_path . basename( $_FILES['foto']['name']);

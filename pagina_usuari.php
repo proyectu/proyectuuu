@@ -156,7 +156,11 @@ font-size: 12px;
 color: white;
 font-family: 'Orbitron', sans-serif;
 }
-
+            #nofoto {
+                position: absolute;
+  top: 10px;           
+left:  1px;
+}
 
 
 </style>
@@ -165,24 +169,16 @@ font-family: 'Orbitron', sans-serif;
 
  <?php
  
-//if(isset($_POST["nfoto"])){
-
   if(isset($_POST['confirma'])){  
 
-
-
-
-    //$v=$_POST['nfoto'];
     $v=basename( $_FILES['nfoto']['name']);
                $target_path = "imagenes/";
 $target_path = $target_path . basename( $_FILES['nfoto']['name']);
 move_uploaded_file($_FILES['nfoto']['tmp_name'], $target_path);
     $usu = $_SESSION['usuari'];
     $nnfoto= "UPDATE usuari SET foto = '$v' WHERE nomUsuari = '$usu'";
-$actualitzafoto = mysqli_query($connexio, $nnfoto);
-    
+$actualitzafoto = mysqli_query($connexio, $nnfoto);   
 } 
- 
  ?>
  
  
@@ -199,8 +195,8 @@ $actualitzafoto = mysqli_query($connexio, $nnfoto);
            $ff = mysqli_fetch_array($q);
            $x= $ff['foto'];
                 
-                
-                       echo "<img src='imagenes/$x' width='100' heigh='100px'>"; ?>
+           if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
+                echo "<img src='imagenes/$x' width='100' heigh='100'>"; }?>
                 </td> 
               
             </tr> 
@@ -214,7 +210,7 @@ $actualitzafoto = mysqli_query($connexio, $nnfoto);
                    
        if(isset($_POST["ncontrasena"]) && isset ($_POST["ncontrasena2"])){
             if((hash('sha256', $_POST['ncontrasena'])) == (hash('sha256', $_POST['ncontrasena2']))){
-                //header ("Location: pagina_usuari.php");
+                
                 $usu = $_SESSION['usuari'];
 $nncontrasena = hash('sha256', $_POST['ncontrasena']);
 $ncontrasena= "UPDATE usuari SET clau = '$nncontrasena' WHERE nomUsuari = '$usu'";
