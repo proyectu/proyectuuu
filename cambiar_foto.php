@@ -37,6 +37,7 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
              }
                          #foto {
                 position: absolute;
+                top: 10px;
 border: 2px solid white;
 right:  200px;
 border-radius: 800px;
@@ -128,8 +129,8 @@ echo "Hola $usuari"
            $ff = mysqli_fetch_array($q);
            $x= $ff['foto'];
                 
-                
-                       echo "<img src='imagenes/$x' width='100' heigh='100'>"; ?>
+                if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
+                echo "<img src='imagenes/$x' width='100' heigh='100'>"; }?>
                 </td> 
               
             </tr> 

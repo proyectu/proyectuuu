@@ -197,14 +197,8 @@ overflow: hidden;
 
  <?php
  
-//if(isset($_POST["nfoto"])){
 
-  if(isset($_POST['Aceptar'])){  
-
-
-
-
-    //$v=$_POST['nfoto'];
+  if(isset($_POST['confirma'])){  
     $v=basename( $_FILES['nfoto']['name']);
                $target_path = "imagenes/";
 $target_path = $target_path . basename( $_FILES['nfoto']['name']);
@@ -231,8 +225,8 @@ $actualitzafoto = mysqli_query($connexio, $nnfoto);
            $ff = mysqli_fetch_array($q);
            $x= $ff['foto'];
                 
-                
-                       echo "<img src='imagenes/$x' width='100' heigh='100px'>"; ?>
+                if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
+                echo "<img src='imagenes/$x' width='100' heigh='100px'>";  } ?>
                 </td> 
               
             </tr> 

@@ -44,6 +44,7 @@ font-family: 'Orbitron', sans-serif;
              }
             #foto {
                 position: absolute;
+                top: 10px;
 border: 2px solid white;
 right:  200px;
 border-radius: 800px;
@@ -106,8 +107,8 @@ overflow: hidden;
            $ff = mysqli_fetch_array($q);
            $x= $ff['foto'];
                 
-                
-                       echo "<img src='imagenes/$x' width='100' heigh='100'>"; ?>
+                if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
+                echo "<img src='imagenes/$x' width='100' heigh='100'>"; } ?>
                 </td> 
               
             </tr> 
