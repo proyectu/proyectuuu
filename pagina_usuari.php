@@ -167,7 +167,7 @@ font-family: 'Orbitron', sans-serif;
  
 //if(isset($_POST["nfoto"])){
 
-  if(isset($_POST['Aceptar'])){  
+  if(isset($_POST['confirma'])){  
 
 
 
@@ -218,11 +218,18 @@ $actualitzafoto = mysqli_query($connexio, $nnfoto);
                 $usu = $_SESSION['usuari'];
 $nncontrasena = hash('sha256', $_POST['ncontrasena']);
 $ncontrasena= "UPDATE usuari SET clau = '$nncontrasena' WHERE nomUsuari = '$usu'";
-$actualitza = mysqli_query($connexio, $ncontrasena);
-            }  else {
-                header ("Location: cambiar_contrasena.php");
+$actualitza = mysqli_query($connexio, $ncontrasena); ?>
+<script>
+alert('Password actualizado');
+</script> <?php
+            }  elseif ((hash('sha256', $_POST['ncontrasena'])) != (hash('sha256', $_POST['ncontrasena2']))) {
+                                ?> <script>
+alert('El password no coincide');
+window.location.href='cambiar_contrasena.php';
+</script> <?php 
+            
             }
-       } 
+       }
             
        ?>
 <div id="titulochat"><b>Soporte Técnico</b></div>

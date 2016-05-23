@@ -112,7 +112,7 @@ echo "Hola $usuari"
             
             <b> <input type="file" name="nfoto"><br></b></div>
 <div id="aceptar">
-            <input type="submit" value="Aceptar" name="Aceptar">
+            <input type="submit" value="Aceptar" name="confirma">
             
            
        
