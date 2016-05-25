@@ -121,6 +121,14 @@ top: 10px;
 border-radius: 800px;
 overflow: hidden;
 }
+            #menu5 {
+                position: absolute;
+                border: 2px solid white;
+left: 490px;
+top: 10px;
+border-radius: 800px;
+overflow: hidden;
+}
             #en1 {
                 position: absolute;
 left: 40px;
@@ -151,6 +159,15 @@ font-family: 'Orbitron', sans-serif;
                 position: absolute;
              
 left: 375px;
+top: 50px;
+font-size: 12px;
+color: white;
+font-family: 'Orbitron', sans-serif;
+}
+            #en5 {
+                position: absolute;
+             
+left: 500px;
 top: 50px;
 font-size: 12px;
 color: white;
@@ -256,12 +273,13 @@ echo "Hola $usuari"
 <div id="menu2"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="menu3"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="menu4"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
+<div id="menu5"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="en1"><a href="fotos.php"> Fotos</a></div>  
 <div id="en2"><a href="contacto.php"> Contacto</a></div> 
 <div id="en3"><a href="donde.php"> ¿Donde?</a></div> 
 <div id="en4"><a href="enlaces.php"> Otros Enlaces</a></div> 
-   
-   
+<div id="en5"><a href="http://192.168.8.233"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div>   
+
    
    </body>
 </html>

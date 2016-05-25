@@ -128,6 +128,14 @@ top: 10px;
 border-radius: 800px;
 overflow: hidden;
 }
+            #menu5 {
+                position: absolute;
+                border: 2px solid white;
+left: 490px;
+top: 10px;
+border-radius: 800px;
+overflow: hidden;
+}
             #en1 {
                 position: absolute;
 left: 40px;
@@ -163,6 +171,15 @@ font-size: 12px;
 color: white;
 font-family: 'Orbitron', sans-serif;
 }
+            #en5 {
+                position: absolute;
+             
+left: 500px;
+top: 50px;
+font-size: 12px;
+color: white;
+font-family: 'Orbitron', sans-serif;
+}
             #mapa {
                 position: absolute;
              border: 2px solid white;
@@ -178,7 +195,7 @@ overflow: hidden;
             #direccion {
                 position: absolute;
              
-right: 360px;
+right: 460px;
 top: 520px;
 font-size: 12px;
 color: white;
@@ -276,15 +293,16 @@ echo "Hola $usuari"
 <div id="menu2"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="menu3"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="menu4"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
+<div id="menu5"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="en1"><a href="fotos.php"> Fotos</a></div>  
 <div id="en2"><a href="contacto.php"> Contacto</a></div> 
 <div id="en3"><a href="donde.php"> ¿Donde?</a></div> 
 <div id="en4"><a href="enlaces.php"> Otros Enlaces</a></div> 
-   
-<div id="mapa"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.1249904604497!2d2.006400214878164!3d41.56653939283371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a492c0894bf995%3A0x53c28f586fcaf3b4!2sCarrer+de+Mare+de+D%C3%A9u+dels+%C3%80ngels%2C+49%2C+08221+Terrassa%2C+Barcelona!5e0!3m2!1ses!2ses!4v1463673570144" width="650" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+<div id="en5"><a href="http://192.168.8.233"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div>    
+<div id="mapa"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.414269544485!2d2.004916715431172!3d41.56027787924866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49294c61c5de3%3A0x247827e3959a11a4!2sCarrer+Col%C2%B7lumela%2C+12%2C+08224+Terrassa%2C+Barcelona!5e0!3m2!1ses!2ses!4v1464193090845" width="650" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 <div id="direccion">
-    Carrer de Mare de Déu dels Àngels, 49 <br>
-08221 Terrassa<br>
+Carrer Col.Lumela,12<br>
+08224 Terrassa<br>
 Barcelona<br>
 España</div>
 
