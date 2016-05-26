@@ -32,35 +32,7 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
 			
     </head>
 	  <body background="imagenes/Pulse_Wallpaper_Pack_by_NYMEZIDE.jpg">
-       <!--       <style type="text/css">
-            #imagen {
-                position: absolute;
-border: 2px solid grey;
-display: block;
-margin-left: 400px;
-margin-top: 100px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #sesion {
-position: absolute;
-margin-left: 590px;
-margin-top: 100px;
-color: white;
-}
-            #volver {
-position: absolute;
-margin-left: 540px;
-margin-top: 160px;
-color: white;
-}
-           #logo {
-position: absolute;
-margin-left: 10px;
-margin-top: 400px;
 
-}
-</style> -->
 <img   id='imagen' src='imagenes/fondos-negros-para-pantalla-2.jpg' width='500' height="200">
               
  	  	<div id="wrapper">
