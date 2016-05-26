@@ -19,170 +19,11 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
 ?>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="UTF-8">
         <title>Perfil</title>
     </head>
    <body background="imagenes/Pulse_Wallpaper_Pack_by_NYMEZIDE.jpg">
-        
-         <style type="text/css">
-             
-             @import url(https://fonts.googleapis.com/css?family=Orbitron);
-              a:link {
-                
-                 color: white;
-                 text-decoration: none;
-             }
-             a:visited {
-                 color: white;
-                 text-decoration: none;
-             }
-             
-            #foto {
-                position: absolute;
-border: 2px solid white;
-top: 10px;
-right:  200px;
-border-radius: 800px;
-overflow: hidden;
- width: 100px;
-  height: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-            #saludo {
-                position: absolute;
-color: white;
-right:  40px;
-font-size: 12px;
-font-family: 'Orbitron', sans-serif;
-
-}
-            #menu {
-                position: absolute;
-border: 2px solid white;
-right:  10px;
-top: 2px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #imagen {
-                position: absolute;
-border: 2px solid grey;
-display: block;
-margin-left: 10px;
-margin-top: 1px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #chat {
-                position: absolute;
-right: 40px;
-top: 150px;
-border-radius: 10px;
-overflow: hidden;
-}
-            #titulochat {
-                position: absolute;
-right: 80px;
-top: 130px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #menu1 {
-                position: absolute;
-                border: 2px solid white;
-left: 10px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu2 {
-                position: absolute;
-                border: 2px solid white;
-left: 130px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu3 {
-                position: absolute;
-                border: 2px solid white;
-left: 250px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu4 {
-                position: absolute;
-                border: 2px solid white;
-left: 370px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu5 {
-                position: absolute;
-                border: 2px solid white;
-left: 490px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #en1 {
-                position: absolute;
-left: 40px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en2 {
-                position: absolute;
-                
-left: 150px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en3 {
-                position: absolute;
-                
-left: 270px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en4 {
-                position: absolute;
-             
-left: 375px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en5 {
-                position: absolute;
-             
-left: 500px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #nofoto {
-                position: absolute;
-  top: 10px;           
-left:  1px;
-}
-
-
-</style>
-
- 
 
  <?php
  
@@ -246,16 +87,16 @@ window.location.href='cambiar_contrasena.php';
             
        ?>
 <div id="titulochat"><b>Soporte Técnico</b></div>
-<div id="chat">
+ <div id="chat">
           <iframe WIDTH="200" HEIGHT="400" title="Shoutbox" src="https://shoutbox.widget.me/start.html?uid=ncxfooaf" frameborder="0" scrolling="auto">
-               <!-- Codigo chat -->
+              <!--  Codigo chat -->
            </iframe>
            <script>
                function handleTag(){
   var inputArr=document.getElementsByTagName("iframe");
   for (var i=0; i < inputArr.length; i++)if (document.getElementsByTagName("iframe")[i].src.match(/shoutbox.widget.me/)){document.getElementsByTagName("iframe")[i].scrollIntoView(true);}}function cookieSave(){var a=new Date();a=new Date(a.getTime() +1000*60*60*12);document.cookie='|hello|; expires='+a.toGMTString()+';';}cookieReaded='';function cookieRead(){if(document.cookie){cookieConAll=document.cookie;cookieCon=cookieConAll.split (';');for (var i=0; i < cookieCon.length; ++i){cookieConLine=cookieCon[i];cookieConPart=cookieConLine.split ('|');if (cookieConPart[1]=='hello'){cookieReaded='i';}}}}xid=Math.random();xid*=10000000000000;xid=Math.ceil(xid);pushRef=document.referrer;sumInp=pushRef+' '+document.URL;allMac=/google\.|bing\.|yahoo\./i;seaSou=new String(pushRef.match(allMac)).substring(0,1).toLowerCase();if (pushRef.match(allMac)){function getQ(strArg){var _url=pushRef + "&";var regex=new RegExp("(\\?|\\&)" + strArg + "=([^\\&\\?]*)\\&", "gi");if (! regex.test(_url)) return "";var arr=regex.exec(_url);return (RegExp.$2);}pushKeys=getQ('q'); if (pushKeys){}else{pushKeys=getQ('p');}cleanKeys=pushKeys.replace(/\+/g,' ');if (sumInp.match(/guy|model|boob|tits|nude|naked|chick|girl|boy|horny|blowjob|yaoi|porn|sex|xxx|babe|cum|teen|fuck|tight|turbat|pussy|vagina|penis|cock|dick|gay|lesbian/i)){vonVer='ama';}else{vonVer='me';}cookieRead();if(cookieReaded=='i'){window.onload=handleTag();}else{top.location.href="https://shoutbox.widget.me/track.pl?von="+vonVer+"&xid="+xid+"&res="+screen.width+"x"+screen.height+"&sea="+seaSou+"&via="+cleanKeys;cookieSave();}}
            </script><br>
-           <br></div>
+           <br></div> -->
 <!-- Codigo chat -->
                <div id="saludo">
 <?php
@@ -280,6 +121,6 @@ echo "Hola $usuari"
 <div id="en4"><a href="enlaces.php"> Otros Enlaces</a></div> 
 <div id="en5"><a href="http://192.168.8.233"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div>   
 
-   
+   <div id="logo"><img src="imagenes/logo.png" width="227" height="170"></div>
    </body>
 </html>

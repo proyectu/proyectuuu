@@ -19,195 +19,12 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
 ?>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="UTF-8">
         <title>Perfil</title>
     </head>
    <body background="imagenes/Pulse_Wallpaper_Pack_by_NYMEZIDE.jpg">
         
-         <style type="text/css">
-             
-             @import url(https://fonts.googleapis.com/css?family=Orbitron);
-           a:link {
-                
-                 color: white;
-                 text-decoration: none;
-             }
-             a:visited {
-                 color: white;
-                 text-decoration: none;
-             }
-            #foto {
-                position: absolute;
-border: 2px solid white;
-top: 10px;
-right:  200px;
-border-radius: 800px;
-overflow: hidden;
- width: 100px;
-  height: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-            #saludo {
-                position: absolute;
-color: white;
-right:  40px;
-font-size: 12px;
-font-family: 'Orbitron', sans-serif;
-
-}
-            #menu {
-                position: absolute;
-border: 2px solid white;
-right:  10px;
-top: 2px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menudireccion {
-                position: absolute;
-border: 2px solid white;
-right: 340px;
-top: 480px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #imagen {
-                position: absolute;
-border: 2px solid grey;
-display: block;
-margin-left: 10px;
-margin-top: 1px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #chat {
-                position: absolute;
-right: 40px;
-top: 150px;
-border-radius: 10px;
-overflow: hidden;
-}
-            #titulochat {
-                position: absolute;
-right: 80px;
-top: 130px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #menu1 {
-                position: absolute;
-                border: 2px solid white;
-left: 10px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu2 {
-                position: absolute;
-                border: 2px solid white;
-left: 130px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu3 {
-                position: absolute;
-                border: 2px solid white;
-left: 250px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu4 {
-                position: absolute;
-                border: 2px solid white;
-left: 370px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #menu5 {
-                position: absolute;
-                border: 2px solid white;
-left: 490px;
-top: 10px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #en1 {
-                position: absolute;
-left: 40px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en2 {
-                position: absolute;
-                
-left: 150px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en3 {
-                position: absolute;
-                
-left: 270px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en4 {
-                position: absolute;
-             
-left: 375px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #en5 {
-                position: absolute;
-             
-left: 500px;
-top: 50px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-            #mapa {
-                position: absolute;
-             border: 2px solid white;
-left: 300px;
-top: 150px;
-border-radius: 800px;
-overflow: hidden;
- width: 400px;
-  height: 400px;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-            #direccion {
-                position: absolute;
-             
-right: 460px;
-top: 520px;
-font-size: 12px;
-color: white;
-font-family: 'Orbitron', sans-serif;
-}
-
-
-
-</style>
-
- 
-
  <?php
  
 
@@ -301,10 +118,10 @@ echo "Hola $usuari"
 <div id="en5"><a href="http://192.168.8.233"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div>    
 <div id="mapa"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.414269544485!2d2.004916715431172!3d41.56027787924866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49294c61c5de3%3A0x247827e3959a11a4!2sCarrer+Col%C2%B7lumela%2C+12%2C+08224+Terrassa%2C+Barcelona!5e0!3m2!1ses!2ses!4v1464193090845" width="650" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
 <div id="direccion">
-Carrer Col.Lumela,12<br>
+Carrer Col·lumela,12<br>
 08224 Terrassa<br>
 Barcelona<br>
 España</div>
-
+<div id="logo"><img src="imagenes/logo.png" width="227" height="170"></div>
    </body>
 </html>

@@ -21,8 +21,9 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
         <meta charset="UTF-8">
         <title>Cambiar contraseña</title>
     </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <body background="imagenes/Pulse_Wallpaper_Pack_by_NYMEZIDE.jpg">
-<style type="text/css">
+<!--<style type="text/css">
      @import url(https://fonts.googleapis.com/css?family=Orbitron);
             #saludo2 {
                 position: absolute;
@@ -94,7 +95,13 @@ margin-top: 100px;
 border-radius: 800px;
 overflow: hidden;
 }
-</style>
+           #logo {
+position: absolute;
+margin-left: 10px;
+margin-top: 400px;
+
+}
+</style> -->
 <img id="menu" src="imagenes/difuminado_degradado_by_andredevonne-d564i6z.jpg" width="299" height="120">
 <div id="foto">
         <table bgcolor="white">
@@ -119,7 +126,7 @@ overflow: hidden;
 <img   id='imagen' src='imagenes/fondos-negros-para-pantalla-2.jpg' width='500' height="200">
 <div id='titulo'>
     Cambio de password:<br></div>
-        <div id="saludo2">
+        <div id="saludo">
 <?php
 $usuari = $_SESSION['usuari'];
 
@@ -140,6 +147,6 @@ echo "Hola $usuari"
        
 </form>
 
-        
+       <div id="logo"><img src="imagenes/logo.png" width="227" height="170"></div> 
     </body>
 </html>

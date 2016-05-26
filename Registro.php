@@ -5,64 +5,12 @@ session_start();
 ?>
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="UTF-8">
         <title>Cambiar contraseña</title>
     </head>
     <body background="imagenes/Pulse_Wallpaper_Pack_by_NYMEZIDE.jpg">
-        <style type="text/css">
-            @import url(https://fonts.googleapis.com/css?family=Orbitron);
-              a:link {
-                
-                 color: white;
-                 text-decoration: none;
-             }
-             a:visited {
-                 color: white;
-                 text-decoration: none;
-             }
-            #foto {
-                position: absolute;
-border: 2px solid white;
-right:  200px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #imagen {
-                position: absolute;
-border: 2px solid grey;
-display: block;
-margin-left: 400px;
-margin-top: 100px;
-border-radius: 800px;
-overflow: hidden;
-}
-            #form {
-position: absolute;
-margin-left: 570px;
-margin-top: 150px;
-color: white;
-font-size: 12px;
-font-family: 'Orbitron', sans-serif;
-}
-            #boton {
-position: absolute;
-margin-left: 50px;
-margin-top: 0px;
-color: white;
-font-size: 12px;
-font-family: 'Orbitron', sans-serif;
-}
-            #saludo {
-                position: absolute;
-color: white;
-right:  40px;
-font-family: 'logobloqo2';
-
-}
-
-
-</style>
-
+        
 <img   id='imagen' src='imagenes/fondos-negros-para-pantalla-2.jpg' width='500' height="300">
 
         
@@ -92,5 +40,6 @@ echo "hola $usuari"."<br>";
        
 
    </div>
+<div id="logo"><img src="imagenes/logo.png" width="227" height="170"></div>
     </body>
 </html>
