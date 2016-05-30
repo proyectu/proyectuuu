@@ -1,19 +1,20 @@
+
 <?php
 session_start();
 $connexio = mysqli_connect("localhost","root","rocoso123","web_projecte");
 
 
-define("TEMPSINACTIU", 3600 ); //Segons mÃ xims que pot estar l'aplicaciÃ³ inactiva
+define("TEMPSINACTIU", 3600 ); //Segons maxims (1 hora)
 
 
 
-//Temps transcorregut des de l'Ãºltim accÃ©s a la pÃ gina i la data actual.
+//El temps transcurregut sera la diferencia entre el temps actual i l'ultim acces
 $tempsTranscorregut = time() - $_SESSION["ultimAcces"];
 
 
-if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han passat 30 segons o mÃ©s des de l'Ãºltim accÃ©s...
-    session_destroy(); //Destruim sessiÃ³
-    header("Location: index.php"); //Mostrem la pÃ gina de caducitat
+if ($tempsTranscorregut >= TEMPSINACTIU) { //Si s'ha superat el temps inactiu, la sessio es tancara
+    session_destroy(); //La sessio es tanca
+    header("Location: index.php"); // Ens torna a la pagina principal
 } 
 ?>
 <html>
@@ -29,15 +30,16 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
         <table bgcolor="white">
             
             <tr >
-                <td> <?php
+                <td> <?php //Mostrarem la fotografia del usuari consultant a la base de dades
                 $usu = $_SESSION['usuari'];
                 $ffoto= "SELECT foto from usuari WHERE nomUsuari = '$usu'";
                 $q = mysqli_query($connexio,$ffoto);
            $ff = mysqli_fetch_array($q);
            $x= $ff['foto'];
-                
-                if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
-                echo "<img src='imagenes/$x' width='100' heigh='100'>"; } ?>
+                // Si l'usuari ha pujat una fotografia es mostrara com a perfil, en cas contrari es mostrara una
+           // per defecte
+           if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
+                echo "<img src='imagenes/$x' width='100' heigh='100'>"; }?>
                 </td> 
               
             </tr> 

@@ -1,28 +1,22 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 
  <?php
-        session_start();
-        
-        
+        session_start();        
  $connexio = mysqli_connect("localhost","root","rocoso123","web_projecte"); 
-
+// Si s'ha introduit l'usuari, amb la contrasenya confirmada correctament, es comprovara si existeix
         if(isset($_POST["usuarionuevo"]) && isset ($_POST["ncontrasena"]) && isset ($_POST["ncontrasena2"])){
            $nusu = $_POST['usuarionuevo'];
-           $f="SELECT * FROM usuari WHERE nomUsuari like '$nusu' ";
+           $f="SELECT * FROM usuari WHERE nomUsuari like '$nusu' "; // Comrpovacio
     
            $q = mysqli_query($connexio,$f);
            $ff=  mysqli_fetch_array($q);
-           
-      
-            if((hash('sha256', $_POST['ncontrasena']) == hash('sha256', $_POST['ncontrasena2']) ) && ( $ff == 0)){
+           //Si el password (encriptat) es igual al password de la confirmacio i no existeix l'usuari llavors
+           //es creara i s'insertara a la base de dades
+                 if((hash('sha256', $_POST['ncontrasena']) == hash('sha256', $_POST['ncontrasena2']) ) && ( $ff == 0)){
                 $nncontrasena = hash('sha256', $_POST['ncontrasena']);
                   $_POST["ncontrasena"];
-            
+            //la fotografia sera opcional, si l'usuari puja una foto es veura com a perfil
+                  //en cas contrari, hi haura una fotografia per defecte
                $foto=basename( $_FILES['foto']['name']);
                $target_path = "imagenes/";
 $target_path = $target_path . basename( $_FILES['foto']['name']);
@@ -31,28 +25,22 @@ move_uploaded_file($_FILES['foto']['tmp_name'], $target_path);
 echo $foto;
 
         $consulta = mysqli_query($connexio, $nnusu);
-                ?><script>
+                ?><script> // si el registre ha tingut exit, sortira una alerta com aquesta
 alert('Cuenta creada con exito'<?php echo $foto ?>);
-</script> <?php
+</script> <?php // si els passwords no han sigut confirmats correctament sortira una alerta de password no correcte
             } elseif ((hash('sha256', $_POST['ncontrasena']) != hash('sha256', $_POST['ncontrasena2']))) { 
                             ?>   <script>
 alert('Contraseña incorrecta');
 window.location.href='Registro.php';
             </script> <?php } else {
                 ?>
-                <script>
+                <script> // Si l'usuari ja existeix a la base de dades sortira aquesta alerta
 alert('Este usuario ya existe');
 window.location.href='Registro.php';
 </script>
-
-               
+              
             <?php } 
-        }
-               
-            
-      
-           
-        
+        }        
 ?>
       
 <html>

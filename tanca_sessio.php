@@ -3,17 +3,17 @@ session_start();
 $connexio = mysqli_connect("localhost","root","rocoso123","web_projecte");
 
 
-define("TEMPSINACTIU", 3600 ); //Segons mÃ xims que pot estar l'aplicaciÃ³ inactiva
+define("TEMPSINACTIU", 3600 ); //Segons maxims (1 hora)
 
 
 
-//Temps transcorregut des de l'Ãºltim accÃ©s a la pÃ gina i la data actual.
+//El temps transcurregut sera la diferencia entre el temps actual i l'ultim acces
 $tempsTranscorregut = time() - $_SESSION["ultimAcces"];
 
 
-if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han passat 30 segons o mÃ©s des de l'Ãºltim accÃ©s...
-    session_destroy(); //Destruim sessiÃ³
-    header("Location: index.php"); //Mostrem la pÃ gina de caducitat
+if ($tempsTranscorregut >= TEMPSINACTIU) { //Si s'ha superat el temps inactiu, la sessio es tancara
+    session_destroy(); //La sessio es tanca
+    header("Location: index.php"); // Ens torna a la pagina principal
 } 
 ?>
 <?php
@@ -48,8 +48,7 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
                                      <div id="sesion"><h2><img src="imagenes/earth_rotate_300_clr.gif" width="50" height="50"></h2></div>
                                          <div id="volver"><br> <a href="index.php"><img src="imagenes/boton_volver_inicio.gif" witdth="100" height="100"></a></div>
 				 
-                                         
-                                         
+                                            
                                          
                                   
 					

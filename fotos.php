@@ -1,20 +1,19 @@
-
 <?php
 session_start();
 $connexio = mysqli_connect("localhost","root","rocoso123","web_projecte");
 
 
-define("TEMPSINACTIU", 3600 ); //Segons mÃ xims que pot estar l'aplicaciÃ³ inactiva
+define("TEMPSINACTIU", 3600 ); //Segons maxims (1 hora)
 
 
 
-//Temps transcorregut des de l'Ãºltim accÃ©s a la pÃ gina i la data actual.
+//El temps transcurregut sera la diferencia entre el temps actual i l'ultim acces
 $tempsTranscorregut = time() - $_SESSION["ultimAcces"];
 
 
-if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han passat 30 segons o mÃ©s des de l'Ãºltim accÃ©s...
-    session_destroy(); //Destruim sessiÃ³
-    header("Location: index.php"); //Mostrem la pÃ gina de caducitat
+if ($tempsTranscorregut >= TEMPSINACTIU) { //Si s'ha superat el temps inactiu, la sessio es tancara
+    session_destroy(); //La sessio es tanca
+    header("Location: index.php"); // Ens torna a la pagina principal
 } 
 ?>
 <html>
@@ -27,8 +26,9 @@ if ($tempsTranscorregut >= TEMPSINACTIU) { //Si la sessiÃ³ ha caducat, han pas
         
  <?php
  
-
-  if(isset($_POST['confirma'])){  
+// Si s'ha finalitzat el formulari de cambiar foto, es pujara la foto escollida
+ // a la carpeta imagenes/ del servidor indicant un nom temporal i la ruta
+  if(isset($_POST['confirma'])){   
     $v=basename( $_FILES['nfoto']['name']);
                $target_path = "imagenes/";
 $target_path = $target_path . basename( $_FILES['nfoto']['name']);
@@ -48,15 +48,16 @@ $actualitzafoto = mysqli_query($connexio, $nnfoto);
         <table bgcolor="white">
             
             <tr>
-                <td> <?php
+                <td> <?php //Mostrarem la fotografia del usuari consultant a la base de dades
                 $usu = $_SESSION['usuari'];
                 $ffoto= "SELECT foto from usuari WHERE nomUsuari = '$usu'";
                 $q = mysqli_query($connexio,$ffoto);
            $ff = mysqli_fetch_array($q);
            $x= $ff['foto'];
-                
-                if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
-                echo "<img src='imagenes/$x' width='100' heigh='100px'>";  } ?>
+                // Si l'usuari ha pujat una fotografia es mostrara com a perfil, en cas contrari es mostrara una
+           // per defecte
+           if(empty($x)){  echo "<img src='imagenes/perfil.png' width='100' heigh='100'>";  } else {
+                echo "<img src='imagenes/$x' width='100' heigh='100'>"; }?>
                 </td> 
               
             </tr> 
@@ -67,18 +68,26 @@ $actualitzafoto = mysqli_query($connexio, $nnfoto);
 
      <?php       
 
-                   
+                 // Si s'ha introduit la nova contrasenya i s'ha confirmat correctament
+     //es comprovara si es igual i s'actualitzara a la base de dades, en cas contrari donara error
        if(isset($_POST["ncontrasena"]) && isset ($_POST["ncontrasena2"])){
             if((hash('sha256', $_POST['ncontrasena'])) == (hash('sha256', $_POST['ncontrasena2']))){
-                //header ("Location: pagina_usuari.php");
+                
                 $usu = $_SESSION['usuari'];
 $nncontrasena = hash('sha256', $_POST['ncontrasena']);
 $ncontrasena= "UPDATE usuari SET clau = '$nncontrasena' WHERE nomUsuari = '$usu'";
-$actualitza = mysqli_query($connexio, $ncontrasena);
-            }  else {
-                header ("Location: cambiar_contrasena.php");
+$actualitza = mysqli_query($connexio, $ncontrasena); ?>
+<script>
+alert('Password actualizado');
+</script> <?php
+            }  elseif ((hash('sha256', $_POST['ncontrasena'])) != (hash('sha256', $_POST['ncontrasena2']))) {
+                                ?> <script>
+alert('El password no coincide');
+window.location.href='cambiar_contrasena.php';
+</script> <?php 
+            
             }
-       } 
+       }
             
        ?>
 <div id="titulochat"><b>Soporte Técnico</b></div>
@@ -110,16 +119,22 @@ echo "Hola $usuari"
 <div id="menu3"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="menu4"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="menu5"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
+<div id="menu6"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
+<div id="menu7"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="100" height="100"></div>
 <div id="en1"><a href="fotos.php"> Fotos</a></div>  
 <div id="en2"><a href="contacto.php"> Contacto</a></div> 
 <div id="en3"><a href="donde.php"> ¿Donde?</a></div> 
 <div id="en4"><a href="enlaces.php"> Otros Enlaces</a></div>
-<div id="en5"><a href="http://192.168.8.233"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div> 
+<div id="en5"><a href="https://owncloud"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div> 
+<div id="en6"><a href="https://webmail"><img src="imagenes/zimbra-logo-square.fw_.png" width="50" height="50"></a></div> 
+<div id="en7"><a href="https://spiceworks"><img src="imagenes/Spice_profile.png" width="40" height="40"></a></div> 
 <div id="foto1"><img src="imagenes/virtual-systems.png" width="200" height="150"></div>
 <div id="foto2"><img src="imagenes/virtualizacion_servidores1-1508x706_c.jpg" width="200" height="150"></div>
 <div id="foto3"><img src="imagenes/VIRTUALIZACION.png" width="200" height="150"></div>
 <div id="foto4"><img src="imagenes/color-lines-abstract-wide-wallpaper-1280x800-022.jpg" width="200" height="150"></div>
    <div id="logo"><img src="imagenes/logo.png" width="227" height="170"></div>
+   
+
    </body>
 </html>
 
