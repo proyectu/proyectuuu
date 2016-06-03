@@ -125,7 +125,7 @@ echo "Hola $usuari"
 <div id="en2"><a href="contacto.php"> Contacto</a></div> 
 <div id="en3"><a href="donde.php"> ¿Donde?</a></div> 
 <div id="en4"><a href="enlaces.php"> Otros Enlaces</a></div>
-<div id="en5"><a href="https://owncloud"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div> 
+<div id="en5"><a href="http://owncloud"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div> 
 <div id="en6"><a href="https://webmail"><img src="imagenes/zimbra-logo-square.fw_.png" width="50" height="50"></a></div> 
 <div id="en7"><a href="https://spiceworks"><img src="imagenes/Spice_profile.png" width="40" height="40"></a></div> 
 <div id="foto1"><img src="imagenes/virtual-systems.png" width="200" height="150"></div>

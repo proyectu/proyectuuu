@@ -124,7 +124,7 @@ echo "Hola $usuari"
 <div id="en2"><a href="contacto.php"> Contacto</a></div> 
 <div id="en3"><a href="donde.php"> ¿Donde?</a></div> 
 <div id="en4"><a href="enlaces.php"> Otros Enlaces</a></div> 
-<div id="en5"><a href="https://owncloud"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div>    
+<div id="en5"><a href="http://owncloud"><img src="imagenes/owncloud-logo_scaled.png" width="80" height="40"></a></div>    
 <div id="en6"><a href="https://webmail"><img src="imagenes/zimbra-logo-square.fw_.png" width="50" height="50"></a></div> 
 <div id="en7"><a href="https://spiceworks"><img src="imagenes/Spice_profile.png" width="40" height="40"></a></div> 
 <div id="mapa"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.414269544485!2d2.004916715431172!3d41.56027787924866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49294c61c5de3%3A0x247827e3959a11a4!2sCarrer+Col%C2%B7lumela%2C+12%2C+08224+Terrassa%2C+Barcelona!5e0!3m2!1ses!2ses!4v1464193090845" width="650" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></div>
